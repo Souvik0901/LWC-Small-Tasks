@@ -1,0 +1,15 @@
+<!--
+  @description       : 
+  @author            : Souvik Sen
+  @group             : 
+  @last modified on  : 07-10-2025
+  @last modified by  : Souvik Sen
+-->
+<template>
+    <div class="container">
+        <a onclick={tileClick}>
+            <div class="title">{product.fields.Name.value}</div>
+            <img class="product-img" src={product.fields.Picture_URL__c.value}></img>
+        </a>
+    </div>
+</template>

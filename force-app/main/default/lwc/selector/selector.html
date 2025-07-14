@@ -1,0 +1,22 @@
+<!--
+  @description       : Available Bikes for User
+  @author            : Souvik Sen
+  @group             : 
+  @last modified on  : 07-10-2025
+  @last modified by  : Souvik Sen
+-->
+<template>
+    <div class="wrapper">
+      <header class="header">Available Bikes for {name}</header>
+      <section class="content">
+        <div class="columns">
+          <main class="main" >
+            <c-list onproductselected={handleProductSelected}></c-list>
+          </main>
+          <aside class="sidebar-second">
+            <c-detail product-id={selectedProductId}></c-detail>
+          </aside>
+        </div>
+      </section>
+    </div>
+  </template>

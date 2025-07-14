@@ -1,0 +1,15 @@
+<!--
+  @description       : hello world samle lwc code
+  @author            : Souvik Sen
+  @group             : 
+  @last modified on  : 07-09-2025
+  @last modified by  : Souvik Sen
+-->
+<template>
+    <lightning-card title="HelloWorld" icon-name="custom:custom14">
+      <div class="slds-m-around_medium">
+        <p>Hello, {greeting}!</p>
+        <lightning-input label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+      </div>
+    </lightning-card>
+  </template>
