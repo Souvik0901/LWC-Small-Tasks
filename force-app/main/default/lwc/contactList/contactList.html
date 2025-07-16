@@ -1,7 +1,7 @@
 <!--
-  @description       : 
+  @description       : HTML template for contact list
   @author            : Souvik Sen
-  @group             : 
+  @group             : LWC
   @last modified on  : 07-16-2025
   @last modified by  : Souvik Sen
 -->
@@ -14,8 +14,8 @@
             columns={columns}>
           </lightning-datatable>       
       </template>
-    <template if:true={contacts.error}>
-      <p>Error loading contacts.</p>
+    <template if:true={errors}>
+      <p>{errors}</p>
     </template>
   </lightning-card>
 </template>
