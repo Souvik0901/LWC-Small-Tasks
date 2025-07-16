@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Souvik Sen
+  @group             : 
+  @last modified on  : 07-16-2025
+  @last modified by  : Souvik Sen
+-->
+<template>
+  <lightning-card title="Account List">
+      <template if:true={accounts.data}>
+          <lightning-datatable
+              key-field="Id"
+              data={accounts.data}
+              columns={columns}>
+          </lightning-datatable>
+      </template>
+      <template if:true={accounts.error}>
+          <p>Error loading accounts.</p>
+      </template>
+  </lightning-card>
+</template>
