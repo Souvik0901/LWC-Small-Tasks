@@ -1,0 +1,21 @@
+<!--
+  @description       : 
+  @author            : Souvik Sen
+  @group             : 
+  @last modified on  : 07-16-2025
+  @last modified by  : Souvik Sen
+-->
+<template>
+  <lightning-card title="Contact List">
+      <template if:true={contacts.data}>
+          <lightning-datatable
+            key-field="Id"
+            data={contacts.data}
+            columns={columns}>
+          </lightning-datatable>       
+      </template>
+    <template if:true={contacts.error}>
+      <p>Error loading contacts.</p>
+    </template>
+  </lightning-card>
+</template>
