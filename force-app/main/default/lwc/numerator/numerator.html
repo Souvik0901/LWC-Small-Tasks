@@ -6,17 +6,29 @@
   @last modified by  : Souvik Sen
 -->
 <template>
-    <lightning-card title="Numerator" icon-name="action:manage_perm_sets">
-      <p class="slds-text-align_center slds-var-m-vertical_medium">
-        Count: <lightning-formatted-number value={counter}></lightning-formatted-number>
-      </p>
-  
-      <c-controls
-        class="slds-show slds-is-relative"
-        onadd={handleIncrement}
-        onsubtract={handleDecrement}
-        onmultiply={handleMultiply}>
-      </c-controls>
+    <lightning-card title="Numerator" icon-name="utility:number_input">
+      <div class="slds-p-around_medium">
+        <p class="slds-text-align_center slds-var-m-vertical_medium">
+          Prior Count: <lightning-formatted-number value={priorCount}></lightning-formatted-number>
+        </p>
+        <p class="slds-text-align_center slds-text-heading_large">
+          Count: <lightning-formatted-number value={counter}></lightning-formatted-number>
+        </p>
+        <div class="slds-text-align_center slds-var-m-top_medium">
+          <lightning-button
+            label="×2"
+            data-factor="2"
+            onclick={handleMultiply}>
+          </lightning-button>
+          <lightning-button
+            label="×3"
+            data-factor="3"
+            class="slds-m-left_small"
+            onclick={handleMultiply}>
+          </lightning-button>
+        </div>
+      </div>
     </lightning-card>
   </template>
+  
   
